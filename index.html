@@ -9,8 +9,11 @@
 <body>
 
     <div id="area">
-        <input type="text" v-model="message">
-        <h1>{{message}}</h1>
+        <!-- <input type="text" v-model="bands"> -->
+        <!-- <h1>{{bands}}</h1> -->
+        <ol v-for='band in bands'>
+            <li>{{ band }}</li>
+        </ol>
     </div>
     
     <script src="https://unpkg.com/vue"></script>
