@@ -1,20 +1,19 @@
 // JS => Now our data is the single source of truth !!!
 
 vm = new Vue( {
-    el:'#area',
+    el:'#vue',
     data: {
+        band: '',
         bands: [ 'TJAMC', 'RIDE', 'BOO RADLEYS', 'MVB'],
     },
+    methods: {
+        addBand: function(band) {
+            this.bands.push(this.band);
+            this.band = '';
+        }
+    },
     mounted() {
-        // selections
-        let bandInput = document.querySelector('input');
-        let buttonInput = document.querySelector('button');
-        // events
-        buttonInput.addEventListener('click', function() {
-            vm.bands.push(bandInput.value);
-            bandInput.value = '';
-        })
-        console.log('ready to go !');
+        console.log('Vue is ready!!!');
     }
 });
 
