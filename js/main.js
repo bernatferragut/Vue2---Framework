@@ -3,17 +3,20 @@
 vm = new Vue( {
     el:'#vue',
     data: {
-        band: '',
-        bands: [ 'TJAMC', 'RIDE', 'BOO RADLEYS', 'MVB'],
+        title: 'title canged with javascript',
+        content: 'This is the content',
+        isLoading: false,
     },
     methods: {
-        addBand: function(band) {
-            this.bands.push(this.band);
-            this.band = '';
+        action1: function() {
+            console.log('you just cliced me!');
+            this.isLoading = !this.loading;
         }
     },
     mounted() {
         console.log('Vue is ready!!!');
+        // this.isLoading = false;
+        console.log(this.isLoading);
     }
 });
 

@@ -8,15 +8,10 @@
     <title>Vue 2</title>
 </head>
 <body>
-
     <div id="vue">
-        <input type="text" v-model="band">
-        <button @click="addBand">ADD NAME</button>
-        <ol>
-            <li v-for='band in bands'>{{ band }}</li>
-        </ol>
-    </div>
-    
+        <button @click="action1" :title="title"> CLICK ME </button>
+        <h3 :class="[isLoading ? 'is-loading' : 'is-not' ]">{{ content }}</h3> 
+    </div>  
     <script src="https://unpkg.com/vue"></script>
     <script src="js/main.js"></script>
 </body>
