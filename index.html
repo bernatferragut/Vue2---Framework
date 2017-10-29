@@ -8,11 +8,20 @@
     <title>Vue 2</title>
 </head>
 <body>
+
     <div id="vue">
-        <button @click="action1" :title="title"> CLICK ME </button>
-        <h3 :class="[isLoading ? 'is-loading' : 'is-not' ]">{{ content }}</h3> 
-    </div>  
+        <h3>ALL TASKS</h3>
+        <ol>
+            <li v-for="task in tasks" v-text="task.description"></li>
+        </ol>
+        <h3>COMPLETED TASKS</h3>
+        <ol>
+            <li v-for="task in completedTasks" v-text="task.description"></li>
+        </ol>
+    </div>
+    
     <script src="https://unpkg.com/vue"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
+
