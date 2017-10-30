@@ -10,14 +10,8 @@
 <body>
 
     <div id="vue">
-        <h3>ALL TASKS</h3>
-        <ol>
-            <li v-for="task in tasks" v-text="task.description"></li>
-        </ol>
-        <h3>COMPLETED TASKS</h3>
-        <ol>
-            <li v-for="task in completedTasks" v-text="task.description"></li>
-        </ol>
+        <h1>Components</h1>
+        <band v-for="band in bandsList"></band>
     </div>
     
     <script src="https://unpkg.com/vue"></script>
